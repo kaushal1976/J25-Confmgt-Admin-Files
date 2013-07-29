@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="paper.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ADD_EDIT_ABSTRACT">
+
+		<field name="paper_id"
+				label="CONFMGT_FIELD_PAPER_ID"
+				alias="paper_id"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="link_id"
+				label="CONFMGT_FIELD_LINK_ID"
+				alias="link_id"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[positiveinteger]]"
+				validate="positiveinteger"
+				type="cktext"/>
+
+		<field name="user"
+				label="CONFMGT_FIELD_SUBMITTED_BY"
+				alias="_user_name"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_SUBMITTED_BY"/>
+
+		<field name="title"
+				label="CONFMGT_FIELD_TITLE"
+				alias="title"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_ONLY_LETTERS_AND_NUMBERS_ARE_ALLOWED_IN_THE_TITLE"
+				type="cktext"/>
+
+		<field name="abstract"
+				label="CONFMGT_FIELD_ABSTRACT"
+				alias="abstract"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktextarea"/>
+
+		<field name="student_paper"
+				label="CONFMGT_FIELD_STUDENT_PAPER"
+				alias="student_paper"
+				filter="BOOL"
+				type="ckradio">
+			<option value="0">CONFMGT_FIELDS_BOOL_NO</option>
+			<option value="1">CONFMGT_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="key_words"
+				label="CONFMGT_FIELD_KEY_WORDS"
+				alias="key_words"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="theme"
+				label="CONFMGT_FIELD_THEME"
+				alias="_theme_name"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				type="ckajax"
+				ajaxContext="confmgt.tracs.ajax.groupby1"
+				nullLabel="CONFMGT_JSEARCH_SELECT_THEME"/>
+
+		<field name="publish"
+				label="CONFMGT_FIELD_PUBLISH"
+				alias="publish"
+				filter="BOOL"
+				access="core.edit.state"
+				type="ckstate">
+			<option value="0">CONFMGT_FIELDS_BOOL_NO</option>
+			<option value="1">CONFMGT_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="absrtactreview.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ABSTRACT_REVIEW">
+
+		<field name="id"
+				alias="id"
+				label="CONFMGT_FIELD_"
+				filter="INT"
+				type="cktext"/>
+	</fieldset>
+
+	<fieldset name="fullpaperreview.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ADD_EDIT_FULL_PAPER_REVIEW">
+
+		<field name="id"
+				alias="id"
+				label="CONFMGT_FIELD_"
+				filter="INT"
+				type="cktext"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_1"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_TITLE_KEY_WORDS_THEME_NAME"
+				label="CONFMGT_JSEARCH_TITLE_KEY_WORDS_THEME_NAME"
+				class="element-search search-query"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				label="JGLOBAL_SORT_BY"
+				class="element-filter"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				label="JFIELD_ORDERING_DESC"
+				class="element-filter"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_2"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_TITLE_KEY_WORDS_THEME_NAME"
+				label="CONFMGT_JSEARCH_TITLE_KEY_WORDS_THEME_NAME"
+				class="element-search search-query"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+</form>

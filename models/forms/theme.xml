@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="theme.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ADD_EDIT_THEME">
+
+		<field name="track"
+				label="CONFMGT_FIELD_TRACK"
+				alias="track"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="name"
+				label="CONFMGT_FIELD_NAME"
+				alias="name"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="description"
+				label="CONFMGT_FIELD_DESCRIPTION"
+				alias="description"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktextarea"/>
+
+		<field name="theme_page"
+				label="CONFMGT_FIELD_THEME_PAGE"
+				alias="theme_page"
+				filter="STRING"
+				type="cktext"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_1"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_NAME_THEME_PAGE_DESCRIPTION"
+				label="CONFMGT_JSEARCH_NAME_THEME_PAGE_DESCRIPTION"
+				class="element-search search-query"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				label="JGLOBAL_SORT_BY"
+				class="element-filter"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				label="JFIELD_ORDERING_DESC"
+				class="element-filter"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_2"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_NAME_THEME_PAGE_DESCRIPTION"
+				label="CONFMGT_JSEARCH_NAME_THEME_PAGE_DESCRIPTION"
+				class="element-search search-query"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+</form>

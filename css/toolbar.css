@@ -1,0 +1,159 @@
+/**                               ______________________________________________
+*                          o O   |                                              |
+*                 (((((  o      <    Generated with Cook Self Service  V2.5.6   |
+*                ( o o )         |______________________________________________|
+* --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
+* @version		0.3.1.2
+* @package		Confmgt
+* @subpackage	
+* @copyright	Copyright 2013, All rights reserved
+* @author		Dr Kaushal Keraminiyage - www.confmgt.com - admin@confmgt.com
+* @license		GNU/GPL
+*
+* /!\  Joomla! is free software.
+* This version may have been modified pursuant to the GNU General Public License,
+* and as distributed it includes or is derivative of works licensed under the
+* GNU General Public License or other free or open source software licenses.
+*
+*             .oooO  Oooo.     See COPYRIGHT.php for copyright notices and details.
+*             (   )  (   )
+* -------------\ (----) /----------------------------------------------------------- +
+*               \_)  (_/
+*/
+
+/**
+* Component icons 48px (Cpanel)
+**/
+.ico-48-confmgt, .icon-48-confmgt {
+	background-image:url('../images/icon-48-confmgt.png');
+}
+.ico-48-confmgt_tracs, .icon-48-confmgt_tracs {
+	background-image:url('../images/icon-48-confmgt_tracs.png');
+}
+.ico-48-confmgt_themes, .icon-48-confmgt_themes {
+	background-image:url('../images/icon-48-confmgt_themes.png');
+}
+.ico-48-confmgt_authors, .icon-48-confmgt_authors {
+	background-image:url('../images/icon-48-confmgt_authors.png');
+}
+.ico-48-confmgt_main, .icon-48-confmgt_main {
+	background-image:url('../images/icon-48-confmgt_main.png');
+}
+.ico-48-confmgt_revrs, .icon-48-confmgt_revrs {
+	background-image:url('../images/icon-48-confmgt_revrs.png');
+}
+.ico-48-confmgt_revs, .icon-48-confmgt_revs {
+	background-image:url('../images/icon-48-confmgt_revs.png');
+}
+.ico-48-confmgt_revspapers, .icon-48-confmgt_revspapers {
+	background-image:url('../images/icon-48-confmgt_revspapers.png');
+}
+.ico-48-confmgt_camera, .icon-48-confmgt_camera {
+	background-image:url('../images/icon-48-confmgt_camera.png');
+}
+.ico-48-confmgt_presentation, .icon-48-confmgt_presentation {
+	background-image:url('../images/icon-48-confmgt_presentation.png');
+}
+.ico-48-confmgt_fullpapers, .icon-48-confmgt_fullpapers {
+	background-image:url('../images/icon-48-confmgt_fullpapers.png');
+}
+.ico-48-confmgt_revoutcomes, .icon-48-confmgt_revoutcomes {
+	background-image:url('../images/icon-48-confmgt_revoutcomes.png');
+}
+.ico-48-confmgt_authpapers, .icon-48-confmgt_authpapers {
+	background-image:url('../images/icon-48-confmgt_authpapers.png');
+}
+.ico-48-confmgt_cpanel, .icon-48-confmgt_cpanel {
+	background-image:url('../images/icon-48-confmgt_cpanel.png');
+}
+
+/**
+* Component icons 16px (Sub Menu)
+**/
+.ico-16-confmgt, .icon-16-confmgt {
+	background-image:url('../images/icon-16-confmgt.png');
+}
+.ico-16-confmgt_tracs, .icon-16-confmgt_tracs {
+	background-image:url('../images/icon-16-confmgt_tracs.png');
+}
+.ico-16-confmgt_themes, .icon-16-confmgt_themes {
+	background-image:url('../images/icon-16-confmgt_themes.png');
+}
+.ico-16-confmgt_authors, .icon-16-confmgt_authors {
+	background-image:url('../images/icon-16-confmgt_authors.png');
+}
+.ico-16-confmgt_main, .icon-16-confmgt_main {
+	background-image:url('../images/icon-16-confmgt_main.png');
+}
+.ico-16-confmgt_revrs, .icon-16-confmgt_revrs {
+	background-image:url('../images/icon-16-confmgt_revrs.png');
+}
+.ico-16-confmgt_revs, .icon-16-confmgt_revs {
+	background-image:url('../images/icon-16-confmgt_revs.png');
+}
+.ico-16-confmgt_revspapers, .icon-16-confmgt_revspapers {
+	background-image:url('../images/icon-16-confmgt_revspapers.png');
+}
+.ico-16-confmgt_camera, .icon-16-confmgt_camera {
+	background-image:url('../images/icon-16-confmgt_camera.png');
+}
+.ico-16-confmgt_presentation, .icon-16-confmgt_presentation {
+	background-image:url('../images/icon-16-confmgt_presentation.png');
+}
+.ico-16-confmgt_fullpapers, .icon-16-confmgt_fullpapers {
+	background-image:url('../images/icon-16-confmgt_fullpapers.png');
+}
+.ico-16-confmgt_revoutcomes, .icon-16-confmgt_revoutcomes {
+	background-image:url('../images/icon-16-confmgt_revoutcomes.png');
+}
+.ico-16-confmgt_authpapers, .icon-16-confmgt_authpapers {
+	background-image:url('../images/icon-16-confmgt_authpapers.png');
+}
+.ico-16-confmgt_cpanel, .icon-16-confmgt_cpanel {
+	background-image:url('../images/icon-16-confmgt_cpanel.png');
+}
+
+/**
+* Icons 16px
+**/
+span.ico-16-task-new, span.icon-16-task-new, span.new {
+	background-image:url('../images/icon-16-task-new.png');
+}
+span.ico-16-task-edit, span.icon-16-task-edit, span.edit {
+	background-image:url('../images/icon-16-task-edit.png');
+}
+span.ico-16-task-delete, span.icon-16-task-delete, span.delete {
+	background-image:url('../images/icon-16-task-delete.png');
+}
+span.ico-16-task-config, span.icon-16-task-config, span.config {
+	background-image:url('../images/icon-16-task-config.png');
+}
+span.ico-16-task-save, span.icon-16-task-save, span.save {
+	background-image:url('../images/icon-16-task-save.png');
+}
+span.ico-16-task-cancel, span.icon-16-task-cancel, span.cancel {
+	background-image:url('../images/icon-16-task-cancel.png');
+}
+span.ico-16-task-toggle, span.icon-16-task-toggle, span.toggle {
+	background-image:url('../images/icon-16-task-toggle.png');
+}
+span.ico-16-task-, span.icon-16-task- {
+	background-image:url('../images/icon-16-task-.png');
+}
+span.ico-16-task-download, span.icon-16-task-download, span.download {
+	background-image:url('../images/icon-16-task-download.png');
+}
+span.ico-16-task-apply, span.icon-16-task-apply, span.apply {
+	background-image:url('../images/icon-16-task-apply.png');
+}
+
+/**
+* System
+**/
+span.spinner {
+	background-image:url('../images/icon-16-spinner.gif');
+}
+[class^="icon-32"], [class*=" icon-32"] {
+	background-position:0px 0px; !important;
+}
+

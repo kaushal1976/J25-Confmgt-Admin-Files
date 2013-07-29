@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="revoutcome.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ADD_EDIT_REVIEW_OUTCOME">
+
+		<field name="paper_id"
+				label="CONFMGT_FIELD_PAPER_ID"
+				alias="paper_id"
+				filter="INT"
+				type="cktext"/>
+
+		<field name="mode"
+				label="CONFMGT_FIELD_MODE"
+				alias="mode"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_MODE"/>
+
+		<field name="review_comment"
+				label="CONFMGT_FIELD_REVIEW_COMMENT"
+				alias="review_comment"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="review_outcome"
+				label="CONFMGT_FIELD_REVIEW_OUTCOME"
+				alias="review_outcome"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_REVIEW_OUTCOME"/>
+
+		<field name="attachment"
+				label="CONFMGT_FIELD_ATTACHMENT"
+				alias="attachment"
+				filter="STRING"
+				class="validate[custom[file_2285]]"
+				validate="file"
+				ruleInstance="file_2285"
+				indirect="true"
+				root="[DIR_REVOUTCOMES_ATTACHMENT]"
+				type="ckfile"
+				allowedExtensions=""/>
+
+		<field name="published"
+				label="CONFMGT_FIELD_PUBLISHED"
+				alias="published"
+				filter="INT"
+				class="validate[custom[numeric]]"
+				validate="numeric"
+				access="core.edit.state"
+				type="ckstate"/>
+	</fieldset>
+</form>

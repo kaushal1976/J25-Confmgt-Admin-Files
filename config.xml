@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<config>
+
+	<fieldset name="configuration"
+			label="CONFMGT_CONFIG_COMPONENT_CONFIGURATION"
+			description="CONFMGT_CONFIG_COMPONENT_CONFIGURATION_1">
+
+		<field name="upload_maxsize"
+				label="CONFMGT_FIELD_UPLOAD_MAX_SIZE"
+				filter="STRING"
+				description="CONFMGT_FIELD_UPLOAD_MAX_SIZE_INFORMATION"
+				type="cktext"/>
+
+		<field name="trash_dir"
+				label="CONFMGT_FIELD_TRASH_DIR"
+				filter="STRING"
+				description="CONFMGT_FIELD_TRASH_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_revs_attachment"
+				label="CONFMGT_FIELD_UPLOAD_DIR_REVS_ATTACHMENT"
+				filter="STRING"
+				description="CONFMGT_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_camera_camera_ready_paper"
+				label="CONFMGT_FIELD_UPLOAD_DIR_CAMERA_READY_CAMERA_READY_PAPER"
+				filter="STRING"
+				description="CONFMGT_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_presentation_presentation"
+				label="CONFMGT_FIELD_UPLOAD_DIR_PRESENTATION_PRESENTATION"
+				filter="STRING"
+				description="CONFMGT_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_fullpapers_full_paper"
+				label="CONFMGT_FIELD_UPLOAD_DIR_FULL_PAPERS_FULL_PAPER"
+				filter="STRING"
+				description="CONFMGT_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+
+		<field name="upload_dir_revoutcomes_attachment"
+				label="CONFMGT_FIELD_UPLOAD_DIR_REVIEW_OUTCOMES_ATTACHMENT"
+				filter="STRING"
+				description="CONFMGT_FIELD_UPLOAD_DIR_INFORMATION"
+				type="cktext"/>
+	</fieldset>
+
+	<fieldset name="permissions"
+			label="CONFMGT_CONFIG_PERMISSIONS"
+			description="CONFMGT_CONFIG_DEFAULT_PERMISSIONS_USED_FOR_ALL_CONTENT_IN_THIS_COMPONENT">
+
+		<field name="rules"
+				label="CONFMGT_FIELD_PERMISSIONS"
+				filter="rules"
+				type="rules"
+				validate="rules"
+				section="component"
+				component="com_confmgt"/>
+	</fieldset>
+</config>

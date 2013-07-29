@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="rev.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ADD_EDIT_REVIEW">
+
+		<field name="paper_id"
+				label="CONFMGT_FIELD_PAPER"
+				alias="_paper_id_title"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_PAPER"/>
+
+		<field name="mode"
+				label="CONFMGT_FIELD_MODE"
+				alias="mode"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_OF_THE_MODE_FIELD"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_MODE"/>
+
+		<field name="reviewer"
+				label="CONFMGT_FIELD_REVIEWER"
+				alias="_reviewer_name"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				type="ckajax"
+				ajaxContext="confmgt.thirdusers.ajax.select1"
+				nullLabel="CONFMGT_JSEARCH_SELECT_REVIEWER"/>
+
+		<field name="comments_on_title"
+				label="CONFMGT_FIELD_COMMENTS_ON_THE_TITLE"
+				alias="comments_on_title"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="comments_on_originality"
+				label="CONFMGT_FIELD_COMMENTS_ON_ORIGINALITY"
+				alias="comments_on_originality"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="comments_on_methodology"
+				label="CONFMGT_FIELD_COMMENTS_ON_METHODOLOGY"
+				alias="comments_on_methodology"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="comments_on_formatting"
+				label="CONFMGT_FIELD_COMMENTS_ON_FORMATTING"
+				alias="comments_on_formatting"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="comments_on_language"
+				label="CONFMGT_FIELD_COMMENTS_ON_THE_LANGUAGE"
+				alias="comments_on_language"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="comments_to_author"
+				label="CONFMGT_FIELD_COMMENTS_TO_AUTHOR"
+				alias="comments_to_author"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktextarea"/>
+
+		<field name="comments_to_coordinator"
+				label="CONFMGT_FIELD_COMMENTS_TO_THE_COORDINATOR"
+				alias="comments_to_coordinator"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="attachment"
+				label="CONFMGT_FIELD_ATTACHMENT"
+				alias="attachment"
+				filter="STRING"
+				class="validate[custom[file_4824]]"
+				validate="file"
+				ruleInstance="file_4824"
+				indirect="true"
+				root="[DIR_REVS_ATTACHMENT]"
+				type="ckfile"
+				allowedExtensions="*.doc|*.pdf|*.rtf|*.txt|*.zip|*.docx"/>
+
+		<field name="recommondation"
+				label="CONFMGT_FIELD_RECOMMONDATION"
+				alias="recommondation"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_FOR_THE_RECOMMENDATION_FIELD"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_RECOMMONDATION"/>
+
+		<field name="rating"
+				label="CONFMGT_FIELD_RATING"
+				alias="rating"
+				filter="INT"
+				required="true"
+				class="validate[required,custom[numeric]]"
+				validate="numeric"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_OF_THE_RATING_FIELD"
+				type="cktext"/>
+
+		<field name="post"
+				label="CONFMGT_FIELD_POST_THE_REVIEW_NOW"
+				alias="post"
+				filter="BOOL"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_OF_THE_SUBMIT_FIELD"
+				type="ckradio">
+			<option value="0">CONFMGT_FIELDS_BOOL_NO</option>
+			<option value="1">CONFMGT_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_1"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_RECOMMONDATION_RATING_COMMENTS_TO_AUTHORS_COMMENTS_TO_THE_COORDINATOR_REVIEWER_NAME"
+				label="CONFMGT_JSEARCH_PAPER_ID_RECOMMONDATION_RATING_COMMENTS_TO_AUTHORS_COMMENTS_TO_THE_COORDINATOR_REVIEWER_NAME"
+				class="element-search search-query"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				label="JGLOBAL_SORT_BY"
+				class="element-filter"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				label="JFIELD_ORDERING_DESC"
+				class="element-filter"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_2"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_RECOMMONDATION_RATING_COMMENTS_TO_AUTHORS_COMMENTS_TO_THE_COORDINATOR_REVIEWER_NAME"
+				label="CONFMGT_JSEARCH_PAPER_ID_RECOMMONDATION_RATING_COMMENTS_TO_AUTHORS_COMMENTS_TO_THE_COORDINATOR_REVIEWER_NAME"
+				class="element-search search-query"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+</form>

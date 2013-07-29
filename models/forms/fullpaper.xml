@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="fullpaper.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_FULL_PAPER_UPLOAD">
+
+		<field name="paper_id"
+				label="CONFMGT_FIELD_PAPER_ID"
+				alias="_paper_id_title"
+				filter="INT"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_PAPER_ID"/>
+
+		<field name="full_paper"
+				label="CONFMGT_FIELD_FULL_PAPER"
+				alias="full_paper"
+				filter="STRING"
+				class="validate[custom[file_6621]]"
+				validate="file"
+				ruleInstance="file_6621"
+				indirect="true"
+				root="[DIR_FULLPAPERS_FULL_PAPER]"
+				type="ckfile"
+				allowedExtensions="*.doc|*.rtf|*.docx"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_1"
+				listKey="id"
+				labelKey="title"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_TITLE_PAPER_ID_ABSTRACT_PAPER_ID_KEY_WORDS"
+				label="CONFMGT_JSEARCH_PAPER_ID_TITLE_PAPER_ID_ABSTRACT_PAPER_ID_KEY_WORDS"
+				class="element-search search-query"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				label="JGLOBAL_SORT_BY"
+				class="element-filter"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				label="JFIELD_ORDERING_DESC"
+				class="element-filter"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_2"
+				listKey="id"
+				labelKey="title"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_TITLE_PAPER_ID_ABSTRACT_PAPER_ID_KEY_WORDS"
+				label="CONFMGT_JSEARCH_PAPER_ID_TITLE_PAPER_ID_ABSTRACT_PAPER_ID_KEY_WORDS"
+				class="element-search search-query"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+</form>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="trac.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ADD_EDIT_TRACK">
+
+		<field name="track_leader"
+				label="CONFMGT_FIELD_TRACK_LEADER"
+				alias="track_leader"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="track_name"
+				label="CONFMGT_FIELD_TRACK_NAME"
+				alias="track_name"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="track_description"
+				label="CONFMGT_FIELD_TRACK_DESCRIPTION"
+				alias="track_description"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktextarea"/>
+	</fieldset>
+</form>

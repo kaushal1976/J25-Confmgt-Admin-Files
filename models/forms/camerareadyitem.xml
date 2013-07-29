@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="camerareadyitem.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_ADD_EDIT_CAMERA_READY_PAPER">
+
+		<field name="paper_id"
+				label="CONFMGT_FIELD_PAPER_ID"
+				alias="_paper_id_title"
+				filter="INT"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_PAPER_ID"/>
+
+		<field name="title"
+				label="CONFMGT_FIELD_TITLE"
+				alias="title"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="abstract"
+				label="CONFMGT_FIELD_ABSTRACT"
+				alias="abstract"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				type="cktextarea"/>
+
+		<field name="copyright_transfer"
+				label="CONFMGT_FIELD_COPYRIGHT_TRANSFER"
+				alias="copyright_transfer"
+				filter="BOOL"
+				required="true"
+				class="validate[required]"
+				type="ckradio">
+			<option value="0">CONFMGT_FIELDS_BOOL_NO</option>
+			<option value="1">CONFMGT_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="camera_ready_paper"
+				label="CONFMGT_FIELD_CAMERA_READY_PAPER"
+				alias="camera_ready_paper"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[file_7385]]"
+				validate="file"
+				ruleInstance="file_7385"
+				indirect="true"
+				root="[DIR_CAMERA_CAMERA_READY_PAPER]"
+				type="ckfile"
+				allowedExtensions="*.doc|*.pdf|*.docx|*.pptx|*.ppt"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_1"
+				listKey="id"
+				labelKey="title"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS"
+				label="CONFMGT_JSEARCH_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS"
+				class="element-search search-query"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				label="JGLOBAL_SORT_BY"
+				class="element-filter"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				label="JFIELD_ORDERING_DESC"
+				class="element-filter"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_2"
+				listKey="id"
+				labelKey="title"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS"
+				label="CONFMGT_JSEARCH_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS"
+				class="element-search search-query"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+</form>

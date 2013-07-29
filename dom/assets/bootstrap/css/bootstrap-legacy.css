@@ -1,0 +1,29 @@
+/* Desactivate .icon-*  */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inherit;
+  width: inherit;
+  height: inherit;
+  *margin-right: inherit;
+  line-height: inherit;
+  vertical-align: inherit;
+  background-image: none;
+  background-position: inherit;
+  background-repeat: inherit;
+  margin-top: inherit;
+}
+
+/* Use a different name ._icon-*  */
+[class^="_icon-"],
+[class*=" _icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}

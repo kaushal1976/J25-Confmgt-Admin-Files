@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="reviewersitem.form"
+			addfieldpath="/administrator/components/com_confmgt/models/fields"
+			label="CONFMGT_JFORM_REVIEWER_DETAILS">
+
+		<field name="user"
+				label="CONFMGT_FIELD_USER"
+				alias="user"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="title"
+				label="CONFMGT_FIELD_TITLE"
+				alias="title"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_OF_THE_TITLE_FIELD"
+				listKey="value"
+				labelKey="text"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_TITLE"/>
+
+		<field name="first_name"
+				label="CONFMGT_FIELD_FIRST_NAME"
+				alias="first_name"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_OF_THE_FIRST_NAME_FIELD"
+				type="cktext"/>
+
+		<field name="surname"
+				label="CONFMGT_FIELD_SURNAME"
+				alias="surname"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_OF_THE_REVIEWER_FIELD"
+				type="cktext"/>
+
+		<field name="email"
+				label="CONFMGT_FIELD_EMAIL"
+				alias="email"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[email]]"
+				validate="email"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_ENTER_A_VALID_EMAIL_ADDRESS"
+				type="cktext"/>
+
+		<field name="affiliation"
+				label="CONFMGT_FIELD_AFFILIATION"
+				alias="affiliation"
+				filter="STRING"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_AFFILIATION_FIELD"
+				type="cktext"/>
+
+		<field name="accepted"
+				label="CONFMGT_FIELD_ACCEPTED"
+				alias="accepted"
+				filter="BOOL"
+				required="true"
+				class="validate[required]"
+				msg-incorrect="CONFMGT_VALIDATOR_PLEASE_CHECK_THE_VALUE_OF_THE_ACCEPTED_FIELD"
+				type="ckradio">
+			<option value="0">CONFMGT_FIELDS_BOOL_NO</option>
+			<option value="1">CONFMGT_FIELDS_BOOL_YES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_1"
+				listKey="value"
+				labelKey="text"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_TITLE_FIRST_NAME_SURNAME_EMAIL_AFFILIATION"
+				label="CONFMGT_JSEARCH_TITLE_FIRST_NAME_SURNAME_EMAIL_AFFILIATION"
+				class="element-search search-query"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				label="JGLOBAL_SORT_BY"
+				class="element-filter"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				label="JFIELD_ORDERING_DESC"
+				class="element-filter"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_2"
+				listKey="value"
+				labelKey="text"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_TITLE_FIRST_NAME_SURNAME_EMAIL_AFFILIATION"
+				label="CONFMGT_JSEARCH_TITLE_FIRST_NAME_SURNAME_EMAIL_AFFILIATION"
+				class="element-search search-query"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+</form>

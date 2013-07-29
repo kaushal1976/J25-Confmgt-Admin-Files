@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="component" version="1.6" method="upgrade">
+	<name><![CDATA[confmgt]]></name>
+	<author><![CDATA[Dr Kaushal Keraminiyage]]></author>
+	<creationDate><![CDATA[29 Jul 2013]]></creationDate>
+	<copyright><![CDATA[Copyright 2013, All rights reserved]]></copyright>
+	<authorEmail><![CDATA[admin@confmgt.com]]></authorEmail>
+	<authorUrl><![CDATA[www.confmgt.com]]></authorUrl>
+	<version><![CDATA[0.3.1.2]]></version>
+	<license><![CDATA[GNU/GPL]]></license>
+	<description><![CDATA[Conference Management Made Easy]]></description>
+
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>confmgt.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+	</files>
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_confmgt.ini</language>
+	</languages>
+
+	<administration>
+
+		<files folder="admin">
+			<folder>classes</folder>
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>dom</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>js</folder>
+			<folder>legacy</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>confmgt.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_confmgt.ini</language>
+			<language tag="en-GB">language/en-GB.com_confmgt.sys.ini</language>
+		</languages>
+		<menu img="components/com_confmgt/images/icon-16-confmgt.png">CONFMGT_MENU_CONFMGT</menu>
+
+		<submenu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_tracs.png" link="option=com_confmgt&amp;view=tracs">CONFMGT_MENU_TRACKS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_themes.png" link="option=com_confmgt&amp;view=themes">CONFMGT_MENU_THEMES</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_authors.png" link="option=com_confmgt&amp;view=authors&amp;layout=default">CONFMGT_MENU_AUTHORS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_authors.png" link="option=com_confmgt&amp;view=authors&amp;layout=authorsorder">CONFMGT_MENU_AUTHORS_ORDER</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_main.png" link="option=com_confmgt&amp;view=main">CONFMGT_MENU_PAPERS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_revrs.png" link="option=com_confmgt&amp;view=revrs&amp;layout=default">CONFMGT_MENU_REVIEWERS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_revs.png" link="option=com_confmgt&amp;view=revs">CONFMGT_MENU_REVIEWS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_revspapers.png" link="option=com_confmgt&amp;view=revspapers&amp;layout=default">CONFMGT_MENU_REVIEWERS_FOR_PAPERS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_camera.png" link="option=com_confmgt&amp;view=camera&amp;layout=default">CONFMGT_MENU_CAMERA_READY</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_presentation.png" link="option=com_confmgt&amp;view=presentation&amp;layout=default">CONFMGT_MENU_PRESENTATIONS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_fullpapers.png" link="option=com_confmgt&amp;view=fullpapers">CONFMGT_MENU_FULL_PAPERS</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_revoutcomes.png" link="option=com_confmgt&amp;view=revoutcomes&amp;layout=default">CONFMGT_MENU_REVIEW_OUTCOMES</menu>
+			<menu img="components/com_confmgt/images/icon-16-confmgt_authpapers.png" link="option=com_confmgt&amp;view=authpapers&amp;layout=default">CONFMGT_MENU_AUTHORS_FOR_PAPERS</menu>
+		</submenu>
+	</administration>
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+</extension>

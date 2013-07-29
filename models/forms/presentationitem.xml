@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="presentationitem.form" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="paper_id"
+				label="CONFMGT_FIELD_PAPER_ID"
+				alias="_paper_id_title"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_PAPER_ID"/>
+
+		<field name="presenter"
+				label="CONFMGT_FIELD_PRESENTED_BY"
+				alias="_presenter_surname"
+				filter="INT"
+				required="true"
+				class="validate[required]"
+				listKey="id"
+				labelKey="surname"
+				type="ckcombo"
+				nullLabel="CONFMGT_JSEARCH_SELECT_PRESENTED_BY"/>
+
+		<field name="biography"
+				label="CONFMGT_FIELD_BIOGRAPHY"
+				alias="biography"
+				filter="STRING"
+				type="cktextarea"/>
+
+		<field name="presentation"
+				label="CONFMGT_FIELD_PRESENTATION"
+				alias="presentation"
+				filter="STRING"
+				required="true"
+				class="validate[required,custom[file_4988]]"
+				validate="file"
+				ruleInstance="file_4988"
+				indirect="true"
+				root="[DIR_PRESENTATION_PRESENTATION]"
+				type="ckfile"
+				allowedExtensions="*.ppt"/>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_1"
+				listKey="id"
+				labelKey="title"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS_PRESENTER_FIRST_NAME_PRESENTER_SURNAME_PRESENTER_AFFILIATION_PRESENTER_EMAIL"
+				label="CONFMGT_JSEARCH_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS_PRESENTER_FIRST_NAME_PRESENTER_SURNAME_PRESENTER_AFFILIATION_PRESENTER_EMAIL"
+				class="element-search search-query"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				nullLabel="JGLOBAL_SORT_BY"
+				label="JGLOBAL_SORT_BY"
+				class="element-filter"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				nullLabel="JFIELD_ORDERING_DESC"
+				label="JFIELD_ORDERING_DESC"
+				class="element-filter"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_confmgt/models/fields">
+
+		<field name="search_search_2"
+				listKey="id"
+				labelKey="title"
+				type="cksearch"
+				placeholder="CONFMGT_FILTER_NULL_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS_PRESENTER_FIRST_NAME_PRESENTER_SURNAME_PRESENTER_AFFILIATION_PRESENTER_EMAIL"
+				label="CONFMGT_JSEARCH_PAPER_ID_TITLE_PAPER_ID_KEY_WORDS_PRESENTER_FIRST_NAME_PRESENTER_SURNAME_PRESENTER_AFFILIATION_PRESENTER_EMAIL"
+				class="element-search search-query"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+				class="element-filter"/>
+	</fieldset>
+</form>
