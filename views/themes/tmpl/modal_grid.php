@@ -61,6 +61,9 @@ JDom::_('framework.sortablelist', array(
 	
 		<tbody>
 			<?php
+		//Get the name of the field to populate on return
+		$modalObject = JFactory::getApplication()->input->get('object', null, 'cmd');
+
 		$k = 0;
 		for ($i=0, $n=count( $this->items ); $i < $n; $i++):
 			$row = &$this->items[$i];
@@ -91,7 +94,7 @@ JDom::_('framework.sortablelist', array(
 			//Prepare the params to send to the callback
 			$pickValue = $row->id;
 			$pickLabel = $this->escape(addslashes($row->name));
-			$jsPick = "if (window.parent) window.parent.$function('$pickValue', '$pickLabel', 'cid');"
+			$jsPick = "if (window.parent) window.parent.$function('$pickValue', '$pickLabel', '$modalObject');"
 			?>
 	
 			<tr class="<?php echo "row$k"; ?> pickable-row"

@@ -90,6 +90,10 @@ JDom::_('framework.sortablelist', array(
 				</th>
 
 				<th>
+					<?php echo JText::_("CONFMGT_FIELD_COUNTRY"); ?>
+				</th>
+
+				<th>
 					<?php echo JHTML::_('grid.sort',  "CONFMGT_FIELD_ATTENDING_THE_CONFERENCE", 'a.attending_the_conference', $listDirn, $listOrder ); ?>
 				</th>
 
@@ -173,6 +177,13 @@ JDom::_('framework.sortablelist', array(
 				<td>
 					<?php echo JDom::_('html.fly', array(
 						'dataKey' => 'affiliation',
+						'dataObject' => $row
+					));?>
+				</td>
+
+				<td>
+					<?php echo JDom::_('html.fly', array(
+						'dataKey' => 'country',
 						'dataObject' => $row
 					));?>
 				</td>

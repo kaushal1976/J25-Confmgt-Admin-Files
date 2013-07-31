@@ -72,17 +72,15 @@ class ConfmgtCkClassFormFieldModal extends JFormField
 		// Build the script.
 		$script = array();
 		$script[] = '	function jSelectItem(id, title, object) {';
-		//$script[] = '	function jSelectItem_'.$this->id.'(id, title, catid, object) {';
-		$script[] = '		document.id("'.$this->id.'_id").value = id;';
-		$script[] = '		document.id("'.$this->id.'_name").value = title;';
+		$script[] = '		document.id(object + "_id").value = id;';
+		$script[] = '		document.id(object + "_name").value = title;';
 		$script[] = '		SqueezeBox.close();';
 		$script[] = '	}';
 
 		// Add the script to the document head.
 		JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 
-
-		$link 	= 'index.php?option=' . $this->_option . '&amp;view=' . $this->_view . '&amp;layout=modal&amp;tmpl=component';
+		$link 	= 'index.php?option=' . $this->_option . '&amp;view=' . $this->_view . '&amp;layout=modal&amp;tmpl=component&amp;object=' . $this->id;
 
 		$title = $this->_title;
 		if (empty($title)) {

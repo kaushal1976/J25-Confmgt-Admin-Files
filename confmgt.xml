@@ -3,7 +3,7 @@
 <extension type="component" version="1.6" method="upgrade">
 	<name><![CDATA[confmgt]]></name>
 	<author><![CDATA[Dr Kaushal Keraminiyage]]></author>
-	<creationDate><![CDATA[29 Jul 2013]]></creationDate>
+	<creationDate><![CDATA[30 Jul 2013]]></creationDate>
 	<copyright><![CDATA[Copyright 2013, All rights reserved]]></copyright>
 	<authorEmail><![CDATA[admin@confmgt.com]]></authorEmail>
 	<authorUrl><![CDATA[www.confmgt.com]]></authorUrl>

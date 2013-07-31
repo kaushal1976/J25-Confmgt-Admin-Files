@@ -197,6 +197,7 @@ class ConfmgtCkModelAuthors extends ConfmgtClassModelList
 				$this->addSelect(	'a.added_by,'
 								.	'a.affiliation,'
 								.	'a.attending_the_conference,'
+								.	'a.country,'
 								.	'a.email,'
 								.	'a.first_name,'
 								.	'a.ordering,'

@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `#__confmgt_authors` (
 	`surname` VARCHAR(255) NOT NULL ,
 	`email` VARCHAR(255) NOT NULL ,
 	`affiliation` VARCHAR(255) NOT NULL ,
+	`country` VARCHAR(255) ,
 	`attending_the_conference` TINYINT NOT NULL DEFAULT 1 ,
 	`user` INT(11) ,
 	`paid_and_registered` TINYINT DEFAULT 0 ,

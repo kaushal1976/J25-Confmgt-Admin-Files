@@ -61,6 +61,12 @@
 				class="validate[required]"
 				type="cktext"/>
 
+		<field name="country"
+				label="CONFMGT_FIELD_COUNTRY"
+				alias="country"
+				filter="STRING"
+				type="cktext"/>
+
 		<field name="attending_the_conference"
 				label="CONFMGT_FIELD_ATTENDING"
 				alias="attending_the_conference"

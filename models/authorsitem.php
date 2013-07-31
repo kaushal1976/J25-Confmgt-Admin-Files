@@ -141,6 +141,7 @@ class ConfmgtCkModelAuthorsitem extends ConfmgtClassModelItem
 				$data->surname = null;
 				$data->email = null;
 				$data->affiliation = null;
+				$data->country = null;
 				$data->attending_the_conference = null;
 				$data->user = $jinput->get('filter_user', $this->getState('filter.user'), 'INT');
 				$data->paid_and_registered = null;
@@ -210,6 +211,7 @@ class ConfmgtCkModelAuthorsitem extends ConfmgtClassModelItem
 				$this->addSelect(	'a.added_by,'
 								.	'a.affiliation,'
 								.	'a.attending_the_conference,'
+								.	'a.country,'
 								.	'a.email,'
 								.	'a.first_name,'
 								.	'a.surname,'
@@ -223,6 +225,7 @@ class ConfmgtCkModelAuthorsitem extends ConfmgtClassModelItem
 				$this->addSelect(	'a.added_by,'
 								.	'a.affiliation,'
 								.	'a.attending_the_conference,'
+								.	'a.country,'
 								.	'a.email,'
 								.	'a.first_name,'
 								.	'a.paid_and_registered,'
